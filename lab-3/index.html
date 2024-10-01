@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Jacquarda+Bastarda+9&family=Qwitcher+Grypen:wght@400;700&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+    <title>Fitness Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #282c34;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-family: 'Qwitcher Grypen', cursive;
+            color: #fff;
+        }
+
+        /* Blog Posts */
+        .blog-post {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-post h2 {
+            color: #282c34;
+            font-family: 'Sixtyfour Convergence', sans-serif;
+        }
+        .blog-post .meta {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .blog-post p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-family: 'Caveat', cursive;
+        }
+
+        /* Comment Section */
+        .comments {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .comments h3 {
+            margin-bottom: 10px;
+        }
+
+        .comments form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .comments textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .comments button {
+            padding: 10px;
+            border: none;
+            background-color: #282c34;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .comments button:hover {
+            background-color: #444;
+        }
+
+        /* Subscribe Section */
+        .subscribe {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .subscribe form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .subscribe input {
+            padding: 10px;
+            width: 50%;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .subscribe button {
+            padding: 10px 20px;
+            background-color: #282c34;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .subscribe button:hover {
+            background-color: #444;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #282c34;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Fitness Blog</h1>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <div class="container">
+            <!-- Blog Post 1 -->
+            <article class="blog-post">
+                <h2>The Best Full-Body Workout</h2>
+                <p class="meta">Posted on <span>October 1, 2024</span></p>
+                <p>
+                    A full-body workout targets every major muscle group in your body, ensuring balanced development and enhancing overall fitness. It helps in building strength, improving endurance, and boosting metabolism. A typical full-body workout includes exercises such as squats, lunges, push-ups, pull-ups, and deadlifts, which challenge multiple muscle groups simultaneously. 
+                </p>
+                <p>
+                    These exercises are compound movements, meaning they engage more than one muscle group at a time. For example, a squat works your quadriceps, hamstrings, glutes, and core. Adding variations like weighted squats or lunges can increase the intensity, promoting better results.
+                </p>
+                <p>
+                    It’s essential to maintain proper form during these exercises to avoid injuries and maximize benefits. Starting with bodyweight exercises and gradually progressing to weights or resistance bands can help beginners. Moreover, incorporating a mix of cardio exercises such as burpees, mountain climbers, or jumping jacks into your routine helps elevate your heart rate, improving cardiovascular health while strengthening muscles.
+                </p>
+                <p>
+                    For optimal results, a full-body workout should be done 2-3 times a week, allowing time for rest and recovery between sessions. Ensure proper nutrition and hydration to fuel your body for these demanding sessions, and always listen to your body to prevent overtraining.
+                </p>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="blog-post">
+                <h2>Healthy Diet Tips for Athletes</h2>
+                <p class="meta">Posted on <span>September 29, 2024</span></p>
+                <p>
+                    Nutrition plays a crucial role in an athlete’s performance and recovery. A well-balanced diet provides the essential nutrients needed to fuel your body, repair muscles, and sustain energy levels during intense training sessions or competitions. 
+                </p>
+                <p>
+                    Carbohydrates are a key energy source for athletes, especially those involved in endurance sports like running, swimming, or cycling. Complex carbohydrates found in whole grains, fruits, and vegetables are absorbed slowly, providing a steady release of energy. Including adequate amounts of proteins such as lean meats, eggs, beans, and dairy is vital for muscle repair and recovery.
+                </p>
+                <p>
+                    Healthy fats should also be part of an athlete’s diet, as they help in maintaining energy stores and support brain function. Avocados, nuts, seeds, and fatty fish like salmon are excellent sources of healthy fats. Hydration is equally important, as dehydration can lead to decreased performance, muscle cramps, and even injury. Drinking water throughout the day, and especially before and after workouts, is essential.
+                </p>
+                <p>
+                    Timing your meals is crucial for athletic performance. Eating a balanced meal 2-3 hours before exercising ensures you have enough energy for a workout. Post-workout meals rich in proteins and carbohydrates help restore glycogen levels and aid in muscle recovery. Athletes should also focus on eating a variety of fruits and vegetables to get essential vitamins and minerals that support overall health and boost the immune system.
+                </p>
+            </article>
+
+            <!-- Comment Section -->
+            <section class="comments">
+                <h3>Leave a Comment</h3>
+                <form>
+                    <label for="comment">Your Comment:</label>
+                    <textarea id="comment" rows="5"></textarea>
+                    <button type="submit">Submit Comment</button>
+                </form>
+            </section>
+
+            <!-- Email Subscription Section -->
+            <section class="subscribe">
+                <h3>Subscribe for Updates</h3>
+                <form>
+                    <label for="email">Enter your email:</label>
+                    <input type="email" id="email" placeholder="your-email@example.com">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>Fitness Blog © 2024 | All Rights Reserved</p>
+        </div>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script type="text/javascript">
+         var x = document.lastModified;
+         document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+</html>
