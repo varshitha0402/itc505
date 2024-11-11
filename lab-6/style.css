@@ -1,0 +1,124 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout */
+body {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "menu main ad"
+        "footer footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 200px 1fr 200px;
+    gap: 10px;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Header Styling */
+header {
+    grid-area: header;
+    background-color: #7be5e9;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu Styling */
+.menu {
+    grid-area: menu;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.menu li {
+    margin: 15px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #0373af;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #b6dcf6;
+}
+
+/* Main Content Styling */
+main {
+    grid-area: main;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+/* Button Styling */
+button {
+    background-color: #2592c4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #288a8a;
+}
+
+/* Advertisement Styling */
+.ad {
+    grid-area: ad;
+    text-align: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ad img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.ad img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+footer {
+    grid-area: footer;
+    background-color: #28b383;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 5px 0;
+}
