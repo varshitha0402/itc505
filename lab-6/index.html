@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Grail Layout Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to My Page</h1>
+    </header>
+
+    <!-- Menu Sidebar -->
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+        <h2>Array Sorting Example</h2>
+        <p>Enter a comma-separated list of numbers:</p>
+        <input type="text" id="arrayInput" placeholder="e.g., 5, 3, 8, 4, 2">
+        
+        <p>Click the button below to sort the array:</p>
+        <button id="sortButton">Sort Array</button>
+        <p>Sorted Array: <span id="result"></span></p>
+        
+        <p>Click the buttons below to find the minimum and maximum values in the array:</p>
+        <button id="minButton">Find Minimum</button>
+        <button id="maxButton">Find Maximum</button>
+        <p>Minimum Value: <span id="minResult"></span></p>
+        <p>Maximum Value: <span id="maxResult"></span></p>
+    </main>
+    
+    <!-- Advertisement Section -->
+    <aside class="ad">
+        <a href="https://www.amazon.com/ASTRIDIA-Artificial-Succulent-Assorted-Succulents/dp/B0BN167KFB/ref=asc_df_B0BN167KFB/?tag=hyprod-20&linkCode=df0&hvadid=693711674074&hvpos=&hvnetw=g&hvrand=13776519122111397040&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1013406&hvtargid=pla-1966247462380&psc=1&mcid=9b24b98a64073603a328893511a9d913&tag=hyprod-20&linkCode=df0&hvadid=693711674074&hvpos=&hvnetw=g&hvrand=13776519122111397040&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1013406&hvtargid=pla-1966247462380&psc=1" target="_blank">
+            <img src="plant.jpg" alt="SFW Amazon Product">
+        </a>
+        <a href="https://www.amazon.com/Metallic-Balloons-Confetti-Birthday-Decorations/dp/B0CGQZ87LZ/ref=asc_df_B0CGQZ87LZ/?tag=hyprod-20&linkCode=df0&hvadid=693768586760&hvpos=&hvnetw=g&hvrand=12946748418090770807&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1013406&hvtargid=pla-2244531904486&psc=1&mcid=0f1841aaa721394a9c6d5f37dd4374ce&tag=hyprod-20&linkCode=df0&hvadid=693768586760&hvpos=&hvnetw=g&hvrand=12946748418090770807&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1013406&hvtargid=pla-2244531904486&psc=1" target="_blank">
+            <img src="Ballons.jpg" alt="SFW Amazon Product">
+        </a>
+        <a href="https://www.amazon.com/VIVOSUN-Industrial-Circulation-Warehouse-Certified/dp/B082XP6TP1/ref=asc_df_B082XP6TP1?tag=bingshoppinga-20&linkCode=df0&hvadid=79852222449803&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=&hvtargid=pla-4583451686320431&psc=1&msclkid=6346cb25c8a41fe6f7f3ac14b4618c59">
+            <img src="fan.jpg" alt="SFW Amazon Product">
+        </a>
+    </aside>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+        <p>Problem Solved: Sorting an array of integers using Bubble Sort, with functions to find minimum and maximum values. This is achieved by looping through the array elements and swapping adjacent values if they are out of order.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+</html>
