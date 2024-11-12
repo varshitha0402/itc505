@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pirates Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pirates of the Caribbean  Adventure</h1>
+        </header>
+        <section id="story">
+            <p id="story-text"></p>
+        </section>
+        <section id="choices">
+            <!-- Choices buttons will appear here -->
+        </section>
+        <section id="image">
+            <img id="story-image" src="" alt="Adventure Scene">
+        </section>
+        <button id="restartBtn" onclick="startGame()">Restart</button>
+    </div>
+
+    <!-- Addendum Section -->
+    <section id="addendum">
+        <h2>Project Addendum</h2>
+        <p><strong>Process and Creative Choices:</strong></p>
+        <p>
+            For this project, I chose a "Pirates of the Caribbean" theme because it offers rich storytelling potential and a lot of exciting decisions for the player to make. I wanted to build an interactive game with suspenseful moments, such as fighting sea monsters, finding cursed treasure, and making alliances with pirates.
+        </p>
+        <p>
+            The structure of the game is based on decision-making at key points in the story. Each decision leads to different paths, which either result in an exciting adventure or a grim fate. I made sure to include at least 8 different endings, as required, so that the game feels varied and replayable.
+        </p>
+        <p>
+            I used JavaScript objects to store the different stages of the story. Each stage contains text, choices, consequences, and an associated image, which makes it easy to update the story dynamically. The CSS gives the page a "piratey" feel, with dark colors, yellow accents, and an old-timey vibe reminiscent of a pirate ship.
+        </p>
+
+        <p><strong>Challenges Faced and Solutions:</strong></p>
+        <p>
+            One of the biggest challenges was ensuring that the story paths aligned correctly. There are many branching decisions, so I had to carefully track each choice and make sure the consequence led to the right next stage in the story. I solved this by using a clear structure in the JavaScript file where each stage is linked to the next one through objects.
+        </p>
+        <p>
+            Another challenge was ensuring the images changed dynamically based on the choices the player made. This required some careful manipulation of the DOM in JavaScript. I created a function to update both the story text and the images based on the current stage of the game.
+        </p>
+        <p>
+            Overall, the project was a great opportunity to practice working with JavaScript, HTML, and CSS to create an interactive and engaging web experience. I learned how important it is to plan out the flow of the game before starting to code, and I gained a better understanding of how to manage user interactions in a dynamic webpage.
+        </p>
+    </section>
+
+    <!-- Footer with Last Modified Script -->
+    <footer>
+        <p>Last updated: <span id="lastModified"></span></p>
+        <script type="text/javascript">
+            var x = document.lastModified;
+            document.getElementById('lastModified').textContent = x;
+        </script>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
