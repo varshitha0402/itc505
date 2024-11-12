@@ -1,0 +1,119 @@
+/* Universal reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2f4f4f;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Stacks children vertically */
+    justify-content: space-between; /* Distributes space evenly */
+    align-items: center;
+    min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+    text-align: center;
+}
+
+/* Container for content */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Space for footer */
+}
+
+/* Header styling */
+header h1 {
+    font-size: 2.5rem;
+    color: #f4c542;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+/* Story text styling */
+#story {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Choices section styling */
+#choices {
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+button {
+    background-color: #f4c542;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #2f4f4f;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #c79f38;
+}
+
+/* Image styling */
+#image {
+    margin-top: 20px;
+}
+
+#story-image {
+    width: 40%;
+    max-width: 40px;
+    border-radius: 5px;
+}
+
+/* Addendum Section */
+#addendum {
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+    color: #f4c542;
+    text-align: left;
+}
+
+#addendum h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+#addendum p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    padding: 10px;
+    width: 100%;
+    color: #f4c542;
+    font-size: 0.9rem;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    margin-top: auto; /* Pushes footer to the bottom of the page */
+}
+
+footer p {
+    margin: 0;
+}
+
+footer span {
+    font-weight: bold;
+}
