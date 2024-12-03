@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Registration Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(120deg, #f66ddb, #C2E9FB);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            background: linear-gradient(135deg, #FDE8E9, #FFFFFF);
+            color: #444;
+            padding: 30px;
+            border-radius: 12px;
+            width: 400px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #2D4059;
+            font-weight: bold;
+        }
+
+        label {
+            font-size: 14px;
+            color: #4A4A4A;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #D9D9D9;
+            border-radius: 8px;
+            background: #F7F9FC;
+            color: #333;
+            font-size: 16px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        input:focus {
+            border-color: #A1C4FD;
+            outline: none;
+            box-shadow: 0 0 8px rgba(161, 196, 253, 0.6);
+        }
+
+        button {
+            background: linear-gradient(135deg, #84FAB0, #8FD3F4);
+            color: #FFFFFF;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #8FD3F4, #84FAB0);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+
+        .checkbox-container input {
+            margin-right: 10px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Registration Form</h1>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            <span id="firstNameError" class="error"></span>
+
+            <label for="middleName">Middle Name:</label>
+            <input type="text" id="middleName" name="middleName">
+            <span id="middleNameError" class="error"></span>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            <span id="lastNameError" class="error"></span>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span id="emailError" class="error"></span>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <span id="passwordError" class="error"></span>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <span id="confirmPasswordError" class="error"></span>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="notRobot" name="notRobot">
+                <label for="notRobot">I'm not a robot</label>
+            </div>
+            <span id="notRobotError" class="error"></span>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            const firstName = document.getElementById("firstName").value.trim();
+            const lastName = document.getElementById("lastName").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+            const notRobot = document.getElementById("notRobot").checked;
+
+            let isValid = true;
+
+            document.getElementById("firstNameError").innerHTML = "";
+            document.getElementById("middleNameError").innerHTML = "";
+            document.getElementById("lastNameError").innerHTML = "";
+            document.getElementById("emailError").innerHTML = "";
+            document.getElementById("passwordError").innerHTML = "";
+            document.getElementById("confirmPasswordError").innerHTML = "";
+            document.getElementById("notRobotError").innerHTML = "";
+
+            if (!firstName) {
+                document.getElementById("firstNameError").innerHTML = "First name is required.";
+                isValid = false;
+            }
+
+            if (!lastName) {
+                document.getElementById("lastNameError").innerHTML = "Last name is required.";
+                isValid = false;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email || !emailRegex.test(email)) {
+                document.getElementById("emailError").innerHTML = "Enter a valid email.";
+                isValid = false;
+            }
+
+            if (password !== confirmPassword) {
+                document.getElementById("confirmPasswordError").innerHTML = "Passwords do not match.";
+                isValid = false;
+            }
+
+            if (!notRobot) {
+                document.getElementById("notRobotError").innerHTML = "Please confirm you are not a robot.";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>
