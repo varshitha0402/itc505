@@ -1,0 +1,133 @@
+/* General Body Styles */
+body {
+    font-family: "Arial", sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 20px 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #cccccc;
+}
+
+.clickable-indicator {
+    color: #ff9500; /* Orange */
+    font-weight: bold;
+}
+
+.target-indicator {
+    color: #5dade2; /* Light Blue */
+    font-weight: bold;
+}
+
+/* Level Buttons */
+#level-buttons {
+    margin: 20px 0;
+}
+
+#level-buttons button, #reset-container button {
+    background-color: #333333;
+    color: #ffffff;
+    border: 2px solid #555555;
+    padding: 10px 15px;
+    font-size: 1em;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 2px 2px 5px #000000;
+}
+
+#level-buttons button:hover, #reset-container button:hover {
+    background-color: #555555;
+    transform: scale(1.1);
+}
+
+/* Game Board */
+#game-board {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 400px;
+    display: grid;
+    gap: 5px;
+    background-color: #2c2c2c;
+    border: 2px solid #444444;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.square {
+    width: 100%;
+    padding-top: 100%; /* Maintain square aspect ratio */
+    background-color: #ff9500; /* Orange (clickable color) */
+    border: 2px solid #e67e22;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: inset 1px 1px 4px #000000;
+}
+
+.square.is-off {
+    background-color: #5dade2; /* Light Blue (target color) */
+    border-color: #3498db;
+}
+
+.square:hover {
+    transform: scale(1.1);
+    background-color: #f7dc6f; /* Yellowish hover effect */
+}
+
+/* Reset Button Container */
+#reset-container {
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #aaaaaa;
+}
+
+/* Addendum Section */
+#addendum {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #2c2c2c;
+    border-top: 3px solid #5dade2;
+    border-bottom: 3px solid #ff9500;
+    text-align: left;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+}
+
+#addendum h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px #000000;
+}
+
+#addendum p, #addendum ol {
+    font-size: 1.1em;
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+#addendum ol {
+    padding-left: 20px;
+}
