@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lights Out</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Lights Out Game</h1>
+    <p>
+        Instructions: <br>
+        - Click on squares that are <span class="clickable-indicator">Orange</span> to toggle their state.<br>
+        - The goal is to turn all squares <span class="target-indicator">Light Blue</span>.<br>
+        - Choose a difficulty level to start the game.
+    </p>
+    
+    <div id="level-buttons">
+        <button onclick="setLevel('easy')">Easy</button>
+        <button onclick="setLevel('medium')">Medium</button>
+        <button onclick="setLevel('hard')">Hard</button>
+    </div>
+
+    <div id="game-board"></div>
+
+    <div id="reset-container">
+        <button onclick="resetGame()">Reset</button>
+    </div>
+
+    <footer>
+        <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+
+    <section id="addendum">
+        <h2>Addendum</h2>
+        <p>
+            <strong>Steps Taken to Build the Game:</strong>
+            <ol>
+                <li>Planned the structure of the game, ensuring it could dynamically generate a grid for different levels.</li>
+                <li>Implemented the toggling logic, where clicking a square changes its state and the states of its adjacent squares.</li>
+                <li>Ensured solvable random configurations by simulating clicks instead of assigning random states directly.</li>
+                <li>Added a winning condition check to detect when all squares are toggled to the "off" state.</li>
+                <li>Designed the user interface with a modern 3D aesthetic using CSS, inspired by the Lights Out 3D game.</li>
+                <li>Integrated reset functionality to allow players to restart the current level without refreshing the page.</li>
+                <li>Included pop-ups to notify players when they win and encourage them to start a new game or try a different level.</li>
+                <li>Created a detailed Addendum to explain the steps taken and challenges encountered during development.</li>
+            </ol>
+        </p>
+        <p>
+            The Lights Out game combines logic, aesthetics, and usability, providing an engaging experience while showcasing web development skills. The combination of CSS for styling, JavaScript for logic, and HTML for structure made it a successful project.
+        </p>
+    </section>
+
+    <script>
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
